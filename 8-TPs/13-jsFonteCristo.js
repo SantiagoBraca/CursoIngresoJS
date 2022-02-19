@@ -9,5 +9,66 @@ e.	Se pedirán un número positivo y se mostrará la cantidad de números Primos
 */
 function ComenzarIngreso () 
 {
- 	
+	let numero;
+
+	numero=document.getElementById('txtIdNumero').value;
+	numero=parseInt
+
+	alert(numero)
+
+ 	/*let respuesta;
+	let numeroIngresado;
+	let sumaNegativos;
+	let sumaPositivos;
+	let cantidadDePositivos;//o contadorDePositivos
+	let cantidadDeNegativos;//o contadorDeNegativos
+	let cantidadDeCeros;//o ContadorDeCeros
+	let cantidadDeNumerosPares;//O ContadorDeNumerosPares
+	let promedioDePositivos;
+	let promedioDeNegativos;
+	let diferenciaPositivaNegativa;
+
+	respuesta="si";
+	sumaNegativos=0;
+	sumaPositivos=0;
+	cantidadDePositivos=0;
+	cantidadDeNegativos=0;
+	cantidadDeCeros=0;
+	cantidadDeNumerosPares=0;
+
+	numeroIngresado=document.getElementById('txtIdNumero').value;
+	numeroIngresado=parseInt(numeroIngresado);
+
+	while(numeroIngresado>-1)
+	{
+		if(numeroIngresado%2==0)
+		{
+			cantidadDeNumerosPares=cantidadDeNumerosPares+1;
+		}
+	}
+
+	document.write("A)Cantidad de numeros pares:" + cantidadDeNumerosPares);
+
+
+
+
+
+
+
+	/*while(respuesta=="si")
+	{
+		numeroIngresado=prompt("ingrese numero");
+		numeroIngresado=parseInt(numeroIngresado);
+		if(numeroIngresado>-1)
+		{
+			//A-Se pedirán un número positivo y se mostrará la cantidad de números pares desde el número ingresado hasta el cero.
+			sumaPositivos=sumaPositivos+1;
+			if(numeroIngresado%2==0)
+			{
+				cantidadDeNumerosPares=cantidadDeNumerosPares+1;
+			}
+		}
+		respuesta=prompt("Si desea continuar escribir si, de lo contrario presionar aceptar")
+	}
+	*/
 }
