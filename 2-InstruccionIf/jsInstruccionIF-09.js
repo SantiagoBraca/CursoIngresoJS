@@ -1,6 +1,12 @@
+//IF 9
+//Bracamonte Santiago
 function mostrar()
 {
-	//Genero el número RANDOM entre 1 y 10 
-	alert("ok");	
+	let mostrar;
 
+	mostrar=Math.floor(Math.random() * 10) + 1;
+
+	alert("El numero generado es " + mostrar)
+	
+	
 }//FIN DE LA FUNCIÓN

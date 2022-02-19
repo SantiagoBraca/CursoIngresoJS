@@ -1,3 +1,5 @@
+//WHILE 9
+//Bracamonte Santiago
 /*
 Al presionar el botón pedir  números  hasta que el usuario quiera,
 mostrar el número máximo y el número mínimo ingresado.*/
@@ -13,9 +15,31 @@ function mostrar()
 	respuesta='si';
 	while(respuesta=="si")
 	{
-		
-		respuesta=prompt("desea continuar?");
+		numeroIngresado=prompt("ingrese numero");
+		numeroIngresado=parseInt(numeroIngresado);
+
+		if(banderaDelPrimero=="es el primero")
+		{
+			banderaDelPrimero="no es el primero";
+
+			numeroMaximo=numeroIngresado;
+			numeroMinimo=numeroIngresado;
+		}
+		else
+		{
+			if(numeroIngresado>numeroMaximo)
+			{
+				numeroMaximo=numeroIngresado;
+			}
+			if(numeroIngresado<numeroMinimo)
+			{
+				numeroMinimo=numeroIngresado;
+			}
+		}
+
+		respuesta=prompt("Si desea continuar ingrese si");
 	}
-	txtIdMaximo.value=numeroMaximo;
-	txtIdMinimmo.value=numeroMinimo;
+	document.getElementById('txtIdMaximo').value=numeroMaximo;
+	document.getElementById('txtIdMinimo').value=numeroMinimo;
 }//FIN DE LA FUNCIÓN
+
