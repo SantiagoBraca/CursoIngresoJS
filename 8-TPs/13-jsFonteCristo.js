@@ -9,14 +9,7 @@ e.	Se pedirán un número positivo y se mostrará la cantidad de números Primos
 */
 function ComenzarIngreso () 
 {
-	let numero;
-
-	numero=document.getElementById('txtIdNumero').value;
-	numero=parseInt
-
-	alert(numero)
-
- 	/*let respuesta;
+	let respuesta;
 	let numeroIngresado;
 	let sumaNegativos;
 	let sumaPositivos;
