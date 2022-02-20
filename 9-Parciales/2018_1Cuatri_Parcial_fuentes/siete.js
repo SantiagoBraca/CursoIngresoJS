@@ -20,16 +20,22 @@ function mostrar()
 	let sumaDeNotas;
 	let sexo;
 	let promedioDeNotas;
-	let cantidadVaronesMasCinco;
+	let cantidadDeVarones;
 	let banderaPrimerMujer;
 	let notaPrimerMujer;
 	let notaMasBaja;
+	let notaMasBajaSexo;
+	let cantidadDeAprobados;
+	let sexoMasDesaprobado;
 
 
 
 	contadorDeAlumnos=0;
 	sumaDeNotas=0;
 	banderaPrimerMujer=0;
+	cantidadDeVarones=0;
+	cantidadDeAprobados=0;
+	sexoMasDesaprobado=0;
 
 	while(contadorDeAlumnos<5)
 	{
@@ -52,7 +58,6 @@ function mostrar()
 
 		sumaDeNotas=sumaDeNotas+notaIngresada;
 
-
 		if(contadorDeAlumnos==1)
 		{
 			notaMasBaja=notaIngresada;
@@ -66,12 +71,12 @@ function mostrar()
 				notaMasBajaSexo=sexo;
 			}
 		}
-
+		
 		if(sexo=="m")
 		{
 			if(notaIngresada>5)
 			{
-				cantidadVaronesMasCinco=cantidadVaronesMasCinco+1;
+				cantidadDeVarones=cantidadDeVarones+1
 			}
 		}
 		else
@@ -82,11 +87,31 @@ function mostrar()
 				notaPrimerMujer=notaIngresada;
 			}
 		}
-
-
+		if(notaIngresada>5)
+		{
+			cantidadDeAprobados=cantidadDeAprobados+1;
+		}
+		else
+		{
+			if(notaIngresada<6)
+			{
+				if(sexoMasDesaprobado=="m")
+				{
+				
+				}
+				else
+				{
+					if(sexoMasDesaprobado=="f")
+					{
+						sexoMasDesaprobado="f"
+					}
+				}
+			}
+		}
 	}
 
 	promedioDeNotas=sumaDeNotas/contadorDeAlumnos;
 
+	alert("A)Promedio de notas: " + promedioDeNotas + ".  B)Nota mas baja: " + notaMasBaja + "(" + notaMasBajaSexo + ").  C)Cantidad de varones con nota mayor o igual a 6: " + cantidadDeVarones + ".  D)Nota de la primer mujer ingresada: " + notaPrimerMujer + ".  E)Cantidad de alumnos aprobados: " + cantidadDeAprobados + ". F)Sexo que mas desaprobo: " + sexoMasDesaprobado);
 }
 
