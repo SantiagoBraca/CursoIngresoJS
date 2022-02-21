@@ -1,84 +1,53 @@
-//WHILE 7 V1
+/*WHILE 07 V1
 //Bracamonte Santiago
-/*
-Al presionar el botón pedir  números  hasta que el USUARIO QUIERA 
-e informar la suma acumulada y el promedio.
+While…
+
+Ejercicio While 07 V1 (Realizar en los archivos  del ejercicio 07 del WHILE)
+
+Realizar el algoritmo que permita 
+	el ingreso por prompt de
+	1-alturas en centimetros	(validar entre 0 y 250) ,
+	2-la edad (validar)
+	3-temperatura(validar)
+	4-el sexo(validar el sexo “f” o “m” o "nb")
+	5-nota (validar)
+	6-nombre
+	de 5 estudiantes de la UTN
+
+1ERA PARTE
+	informar :
+	a)El promedio de las alturas totales.
+	b)Cantidad de personas de cada sexo.
+	c)Cantidad de aprobados(más de 6)
+	d)La cantidad de mujeres que su altura supere
+	 los 190 centímetros.
+
+2da PARTE
+	informar :
+	e)Que sexo tiene mas alumnos
+	f)el nombre de la persona más alta 
+	g)la edad de la primera persona con fiebre (más de 37)
+
+3ra PARTE
+	informar :
+	h)el nombre de la primer mujer aprobada
+	i) la altura promedio de los aprobados
+	j)el nombre del primer hombre, que mide menos de 160 cm y  está  desaprobado.
+
+
+
+4ta PARTE
+	informar :
+	k)	Qué porcentaje de aprobados hay sobre el total de alumnos
+l)	La nota y el nombre  del primer varón más alto de 200cm 
+m)	Qué porcentaje hay de personas con fiebre mayores a 50 años , 
+*sobre los que tienen fiebre .
+*y también sobre el total de Alumnos.
+
 */
 function mostrar()
 {
-	/*
-	let contador;
-	let acumulador;
-	let respuesta;
-	let numeroIngresado;
 
-	contador=0;
-	acumulador=0;
-	respuesta='si';//Primera parte del While
-
-	while(respuesta=="si")
-	{
-		numeroIngresado=prompt("ingrese numero");
-		numeroIngresado=parseInt(numeroIngresado);
-		acumulador=acumulador+numeroIngresado
-		contador=contador+1;
-		respuesta=prompt("Presione si para continuar agregando numeros, de lo contrario, solo presionar aceptar");
-	}
-
-
-	document.getElementById('txtIdSuma').value=acumulador;
-	document.getElementById('txtIdPromedio').value=acumulador/contador;
-	*/
-
-	let alturaPorCentimetros;
-	let edadIngresada;
-	let temperatura;
-	let sexoIngresado;
-	let notaIngresada;
-	let nombreIngresado;
-	let contador;
-	let deseaContinuar;
-
-	deseaContinuar="si"
-
-	alturaPorCentimetros=prompt("Ingrese altura validada(0 hasta 250)");
-	while(alturaPorCentimetros<0 || alturaPorCentimetros>250)
-	{
-		alturaPorCentimetros=parseInt(alturaPorCentimetros);
-		alturaPorCentimetros=prompt("Error, reingrese");
-	}
-
-	edadIngresada=prompt("Ingrese edad valida(0 hasta 99)");
-	while(edadIngresada<0 || edadIngresada>99)
-	{
-		edadIngresada=parseInt(edadIngresada);
-		edadIngresada=prompt("Error, reingrese");
-	}
-
-	temperatura=prompt("Ingrese temperatura valida(-20 hasta 50)");
-	while(temperatura<-20 || temperatura>50)
-	{
-		temperatura=parseInt(temperatura);
-		temperatura=prompt("Error, reingrese");
-	}
-
-	sexoIngresado=prompt("Ingrese sexo valido(m, f, o nb)");
-	while(sexoIngresado!="m" && sexoIngresado!="f" && sexoIngresado!="nb")
-	{
-		sexoIngresado=prompt("Error, reingrese");
-	}
-
-	notaIngresada=prompt("Ingrese nota valida(0 a 10)");
-	while(notaIngresada<0 || notaIngresada>10)
-	{
-		notaIngresada=parseInt(notaIngresada);
-		notaIngresada=prompt("Error, reingrese");
-	}
-
-	while(deseaContinuar=="si")
-	{
-		nombreIngresado=prompt("Ingrese nombre de 5 estudiantes de la UTN");
-		contador=contador+1
-		deseaContinuar=prompt("Si desea continuar, escriba si, de lo contrario, presione aceptar");
-	}
+	
 }//FIN DE LA FUNCIÓN
+

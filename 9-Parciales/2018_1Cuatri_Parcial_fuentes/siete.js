@@ -1,3 +1,5 @@
+//PARCIAL 07 2018
+//Bracamonte Santiago
 /*
 Realizar el algoritmo que permita 
 el ingreso por prompt de las notas 
@@ -27,15 +29,38 @@ function mostrar()
 	let notaMasBajaSexo;
 	let cantidadDeAprobados;
 	let sexoMasDesaprobado;
+	let cantidadDeDesaprobados;
+	let cantidadDeAprobadosMujer;
+	let cantidadDeAprobadosVaron;
+	let cantidadDeReprobadosVaron;
+	let cantidadDeReprobadosMujer;
+	let sexoFemenino;
+	let sexoMasculino;
+	let contadorSexoMasculino;
+	let contadorSexoFemenino;
+	let cantidadDeReprobados;
+	let promedioDeNotasAprobadas;
+	let promedioDeNotasMujer;
+	let sumaDeNotasAprobadas;
+	let contadorAlumnosAprobados;
+	let sumaDeNotasMujer;
 
 
-
+	sexoFemenino="f";
+	sexoMasculino="m";
 	contadorDeAlumnos=0;
 	sumaDeNotas=0;
 	banderaPrimerMujer=0;
 	cantidadDeVarones=0;
 	cantidadDeAprobados=0;
 	sexoMasDesaprobado=0;
+	cantidadDeDesaprobados=0;
+	contadorSexoMasculino=0;
+	contadorSexoFemenino=0;
+	cantidadDeReprobados=0;
+	sumaDeNotasAprobadas=0;
+	contadorAlumnosAprobados=0;
+	sumaDeNotasMujer=0;
 
 	while(contadorDeAlumnos<5)
 	{
@@ -51,12 +76,13 @@ function mostrar()
 		}
 
 		sexo=prompt("ingrese sexo");
-		while(sexo!="f" && sexo!="m")
+		while(sexo!=sexoFemenino && sexo!=sexoMasculino)
 		{
 			sexo=prompt("error ,reingrese sexo");
 		}
 
 		sumaDeNotas=sumaDeNotas+notaIngresada;
+		sumaDeNotasMujer=sumaDeNotasMujer+1
 
 		if(contadorDeAlumnos==1)
 		{
@@ -72,7 +98,7 @@ function mostrar()
 			}
 		}
 		
-		if(sexo=="m")
+		if(sexo==sexoMasculino)
 		{
 			if(notaIngresada>5)
 			{
@@ -87,31 +113,47 @@ function mostrar()
 				notaPrimerMujer=notaIngresada;
 			}
 		}
+		switch(sexo)
+		{
+			case "m":
+			sexoIngresado="masculino";
+			contadorSexoMasculino=contadorSexoMasculino+1;
+			break;
+
+			default:
+			sexoIngresado="femenino";
+			contadorSexoFemenino=contadorSexoFemenino+1
+			break
+		}
 		if(notaIngresada>5)
 		{
-			cantidadDeAprobados=cantidadDeAprobados+1;
+			cantidadDeAprobadosMujer=cantidadDeAprobados+contadorSexoFemenino;
+			cantidadDeAprobadosVaron=cantidadDeAprobados+contadorSexoMasculino;
+			sumaDeNotasAprobadas=sumaDeNotasAprobadas+notaIngresada;
+			contadorAlumnosAprobados=contadorAlumnosAprobados+1;
 		}
 		else
 		{
 			if(notaIngresada<6)
 			{
-				if(sexoMasDesaprobado=="m")
+				cantidadDeReprobadosMujer=cantidadDeReprobados+contadorSexoFemenino;
+				cantidadDeReprobadosVaron=cantidadDeReprobados+contadorSexoMasculino;
+
+				if(cantidadDeReprobadosMujer>cantidadDeReprobadosVaron)
 				{
-				
+					sexoMasDesaprobado=sexoFemenino;
 				}
 				else
 				{
-					if(sexoMasDesaprobado=="f")
-					{
-						sexoMasDesaprobado="f"
-					}
+					sexoMasDesaprobado=sexoMasculino;
 				}
 			}
-		}
-	}
-
+		}	
+	}	
 	promedioDeNotas=sumaDeNotas/contadorDeAlumnos;
-
-	alert("A)Promedio de notas: " + promedioDeNotas + ".  B)Nota mas baja: " + notaMasBaja + "(" + notaMasBajaSexo + ").  C)Cantidad de varones con nota mayor o igual a 6: " + cantidadDeVarones + ".  D)Nota de la primer mujer ingresada: " + notaPrimerMujer + ".  E)Cantidad de alumnos aprobados: " + cantidadDeAprobados + ". F)Sexo que mas desaprobo: " + sexoMasDesaprobado);
+	promedioDeNotasAprobadas=sumaDeNotasAprobadas/contadorAlumnosAprobados;
+	promedioDeNotasMujer=sumaDeNotasMujer/contadorSexoFemenino;
+	
+	alert("A)Promedio de notas: " + promedioDeNotas + ".  B)Nota mas baja: " + notaMasBaja + "(" + notaMasBajaSexo + ").  C)Cantidad de varones con nota mayor o igual a 6: " + cantidadDeVarones + ".  D)Nota de la primer mujer ingresada: " + notaPrimerMujer + ".  E)Cantidad de alumnos aprobados de cada sexo: " + cantidadDeAprobadosMujer + "(F) y " + cantidadDeAprobadosVaron + "(M). F)Sexo que mas desaprobo:(" + sexoMasDesaprobado + "). G)Promedio de notas aprobadas: " + promedioDeNotasAprobadas + ". H)Promedio de notas de las mujeres: " + promedioDeNotasMujer);
 }
 
