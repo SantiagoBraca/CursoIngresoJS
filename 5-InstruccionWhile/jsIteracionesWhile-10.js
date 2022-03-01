@@ -87,7 +87,7 @@ function mostrar()
 	//7 Promedio de positivos
 	if(cantidadDePositivos>0)
 	{
-	promedioDePositivos=sumaPositivos/cantidadDePositivos;//FUNCIONA, BIEN UBICADO
+		promedioDePositivos=sumaPositivos/cantidadDePositivos;//FUNCIONA, BIEN UBICADO
 	}
 	else
 	{

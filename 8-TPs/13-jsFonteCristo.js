@@ -38,7 +38,26 @@ function NumerosImpares()
     {
         numeroIngresadoPositivo=numeroIngresadoPositivo-2
         alert(numeroIngresadoPositivo);
-    }
-    
+    } 
+}
+function NumerosDivisibles()
+{
+    let numeroIngresadoPositivo;
+    let numeroDivisible;
+    let contador;
+
+    numeroIngresadoPositivo=0;
+    numeroDivisible=0;
+    contador=0;
+
+    numeroIngresadoPositivo=document.getElementById('txtIdNumero').value;
+    numeroIngresadoPositivo=parseInt(numeroIngresadoPositivo);
+    numeroDivisible=parseInt(numeroDivisible)
+
+    if(contador%2==0)
+    {
+        contador=contador+1
+        alert("es divisible por " + contador);
+    } 
 }
 

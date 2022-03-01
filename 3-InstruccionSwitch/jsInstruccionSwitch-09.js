@@ -63,6 +63,7 @@ function mostrar()
 				porcentaje=10
  			break;
  		}
+ 		break;
 	}	
 
 	tarifaCalculo = ((tarifa*porcentaje)/100);

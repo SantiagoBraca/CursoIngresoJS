@@ -45,7 +45,7 @@ function CentigradosFahrenheit ()
 	temperatura=parseInt(temperatura)
 
 	temperatura=temperatura
-	resta=temperatura-1.8
+	resta=temperatura*1.8
 	gFahrenheit=resta+32
 	resultado=gFahrenheit
 

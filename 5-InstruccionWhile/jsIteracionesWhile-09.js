@@ -20,10 +20,10 @@ function mostrar()
 
 		if(banderaDelPrimero=="es el primero")
 		{
-			banderaDelPrimero="no es el primero";
-
 			numeroMaximo=numeroIngresado;
 			numeroMinimo=numeroIngresado;
+
+			banderaDelPrimero="no es el primero";
 		}
 		else
 		{
